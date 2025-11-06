@@ -10,8 +10,7 @@ private:
 	double price;
 public:
 	Car(string m, int y, double p) : model(m), year(y), price(p)
-	{
-	}
+	{}
 
 	void displayInfo()
 	{
@@ -45,7 +44,6 @@ public:
 		}
 		read.close();
 	}
-
 };
 
 int main() {
