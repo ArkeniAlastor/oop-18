@@ -11,25 +11,27 @@ private:
 public:
 	Car(string m, int y, double p) : model(m), year(y), price(p)
 	{
-
 	}
 
-	void displayInfo() 
+	void displayInfo()
 	{
 		cout << "Model: " << model << ", Year: " << year << ", Price: $" << price << endl;
+
 	}
 
 	void Print()
 	{
 		cout << model << "," << year << "," << price << endl;
+
 	}
 
-	void SaveFile(const string& filename) 
+	void SaveFile(string filename)
 	{
 		ofstream write;
-		write.open(filename, ios::app);
-		write << "Model: " << model << ", Year: " << year << ", Price: $" << price << endl;	
+		write.open(filename, ios::out);
+		write << "Model: " << model << ", Year: " << year << ", Price: $" << price << endl;
 		write.close();
+
 	}
 
 	void LoadFile()
@@ -43,13 +45,15 @@ public:
 		}
 		read.close();
 	}
+
 };
 
 int main() {
 	
-	Car car1("Toyota Camry", 2020, 24000);
+	Car car1("Toyota Camry", 2020, 24000.50);
 	car1.displayInfo();
 	car1.Print();
 	car1.SaveFile("car_info.txt");
 	car1.LoadFile();
+	return 0;
 }
