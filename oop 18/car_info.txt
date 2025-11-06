@@ -1,0 +1,1 @@
+Model: Toyota Camry, Year: 2020, Price: $24000
